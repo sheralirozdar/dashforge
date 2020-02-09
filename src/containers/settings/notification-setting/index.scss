@@ -1,0 +1,22 @@
+.notifications-setting{
+	.notification-header{
+		margin-bottom: 30px;
+	}
+	.notification-tabs{
+		.ant-row{
+			display: flex;
+			align-items: center;
+		}
+		.slider{
+			margin-bottom: 30px;
+		}
+		.notifications-ant-row{
+			margin: 30px 0px;
+			.ant-row{
+				.ant-col-4{
+					    width: 50%;
+				}
+			}
+		}
+	}
+}

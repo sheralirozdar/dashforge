@@ -1,0 +1,214 @@
+
+.aside {
+  .original-icon {
+    width: 18px;
+    margin-right: 15px;
+  }
+
+  .hamburger {
+    color: "#8392a5";
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2.5px;
+      margin-top: -3px;
+    }
+  }
+
+  &.minimize {
+    .sidebar-footer {
+      display: none;
+    }
+
+    .ant-calendar-insight-filter {
+      display: none;
+    }
+
+    .ant-radio-insight-filter {
+      display: none !important;
+    }
+
+    .aside-body {
+      height: calc(100% - 59px);
+      background: #f7f8fa;
+      overflow-y: hidden;
+    }
+
+    .aside-header {
+      background: #f7f8fa;
+    }
+  }
+
+  &.maximize {
+    .ant-calendar-insight-filter {
+      display: block;
+    }
+
+    .ant-radio-insight-filter {
+      display: flex !important;
+    }
+
+    .aside-body {
+      height: calc(100% - 120px);
+    }
+    .sidebar-footer {
+      display: flex;
+    }
+  }
+
+  .aside-body {
+    overflow-y: scroll;
+    height: calc(100% - 118px);
+    background: #f7f8fa !important;
+    .aside-loggedin {
+      margin-bottom: 0px;
+    }
+
+    .ant-calendar-insight-filter {
+      margin: 10px 0px;
+      width: 100% !important;
+    }
+    .ant-radio-insight-filter {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .aside-body::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .aside-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .aside-body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    width: 3px;
+  }
+
+  .aside-header {
+    background: #f7f8fa;
+  }
+
+  .sidebar-footer {
+    // position: absolute;
+    // top: 102px;
+
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1;
+    border-top: 1px solid rgba(72, 94, 144, 0.16);
+    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    background: #f7f8fa;
+    height: 60px;
+
+    .tabs {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      width: 240px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .tabs-container {
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 240px;
+      height: 60px;
+
+      .js-tab-item-main-control {
+        transform: rotate(45deg);
+      }
+    }
+
+    .tab-item:nth-child(1) {
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s, background 0s linear 0s;
+    }
+
+    .tab-item:nth-child(2) {
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s, background 0s linear 0s;
+    }
+
+    .tab-item:nth-child(4) {
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s, background 0s linear 0s;
+    }
+
+    .tab-item:nth-child(5) {
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s, background 0s linear 0s;
+    }
+
+    .tab-item {
+      background-color: #3f4857;
+      border-radius: 46px;
+      height: 40px;
+      margin: 0 3px;
+      line-height: 0px;
+
+      opacity: 0;
+      transform: scale(0);
+
+      font-size: 20px;
+      text-align: center;
+
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s, background 0s linear 0s;
+
+      i {
+        color: rgb(187, 189, 191);
+        margin: 10px;
+      }
+      &.active {
+        background: rgb(59, 89, 151);
+        i {
+          color: white;
+        }
+      }
+    }
+
+    .tab-item {
+      cursor: pointer;
+    }
+
+    .tab-item--middle {
+      opacity: 1;
+      transform: scale(1);
+      //border-radius: 50%;
+      color: #ffffff;
+      //background-color: #a2b2ff;
+    }
+
+    /* Javascript part */
+
+    .js-tabs-init {
+      width: 240px;
+    }
+
+    .js-tab-item-show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .js-tab-item-active:after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      border: 3px solid #ff5252;
+      background-color: white;
+      opacity: 0.6;
+    }
+  }
+}

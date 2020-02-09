@@ -1,0 +1,21 @@
+@import "~antd/dist/antd.css";
+@import "./containers/navBar/index.scss";
+@import "./containers/rightSideBar/index.scss";
+@import "./containers/calendar/index.scss";
+@import "./containers/chat/chat.scss";
+@import "./containers/searchbar/searchbar.scss";
+@import "./containers/helpDesk/index.scss";
+@import "./containers//webAnalytics/index.scss";
+@import "./containers/settings/personal-info/index.scss";
+@import "./containers/settings/security/index.scss";
+@import "./containers/settings/notification-setting/index.scss";
+@import "./containers/settings/app-setting/index.scss";
+@import './containers/mail/index.scss';
+@import './config/darkmode.scss';
+
+
+@media (max-width: 1199px) {
+	.filemgr-content{
+		width: calc(100% - 240px);
+	}
+}

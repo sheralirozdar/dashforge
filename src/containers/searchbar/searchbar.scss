@@ -1,0 +1,19 @@
+@media (max-width: 1025px) {
+	.right-bar-toggle-btn {
+		display: none;
+	}
+	
+	.search-input, .search-icon{
+		display: none;
+	}
+	
+	.content-header .nav .nav-link + .nav-link {
+		margin-left: 20px;
+	}
+}
+
+@media (min-width: 1025px){
+	.search-toggler {
+		display: none;
+	}
+}

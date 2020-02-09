@@ -1,0 +1,48 @@
+.application-setting{
+	.notification-header{
+		margin-bottom: 30px;
+	}
+	.notification-tabs{
+		.ant-row{
+			display: flex;
+			align-items: center;
+		}
+		.slider{
+			margin-bottom: 30px;
+		}
+		.notifications-ant-row{
+			margin: 30px 0px;
+			.ant-row{
+				.ant-col-4{
+					    width: 50%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.ant-card-body{
+		.notifications-ant-row{
+			margin-left: -2px;
+			margin-right: -2px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start !important;
+			
+			.ant-col{
+				width: 50% !important;
+				.ant-row{
+					display: flex;
+					.ant-col-4{
+						margin-right: 15px;
+						margin-bottom: 15px;
+						width: 100% !important;	
+					}
+				}
+			}
+			
+		}	
+	}
+}
+

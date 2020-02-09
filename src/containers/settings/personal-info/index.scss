@@ -1,0 +1,38 @@
+.personalinfo-header{
+		margin-bottom: 30px;
+	}
+.ant-form{
+
+    display:flex;	
+	.ant-row{
+		align-items: center;
+		display: flex;
+	}
+	.form-personalinfo{
+		margin-right: 20px;
+		margin-bottom: 20px;
+		.ant-calendar-picker{
+			width: 100%;
+		}
+	
+	}
+	.round-border{
+		width: 100%;
+		height: fit-content;
+		border: 1px solid #d9d9d9;
+		border-radius: 25px;
+		padding: 30px;
+	}
+	.buttons{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.ant-form{
+		display: flex;
+		flex-direction: column;
+	}
+
+}
